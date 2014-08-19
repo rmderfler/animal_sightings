@@ -1,0 +1,9 @@
+<h1>Animals</h1>
+
+<ul>
+  <% @animals.each do |animal| %>
+    <li><a href="/animals/<%= animal.id %>"><%= animal.species %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/animals/new">Would you like to add a new animal?</a></p>

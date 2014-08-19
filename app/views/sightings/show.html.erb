@@ -1,0 +1,14 @@
+<h1><%= @sighting.species %></h1>
+
+<p>Place: <%= @sighting.place %></p>
+<p>Date: <%= @sighting.date %></p>
+
+<p><a href="/sightings">Return to sightings listing</a></p>
+
+
+<p><a href="/sightings/<%= @sighting.id %>/edit">Edit</a></p>
+
+<p><a href="/sightings/<%= @sighting.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>

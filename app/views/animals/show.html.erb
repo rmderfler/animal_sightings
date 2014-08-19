@@ -1,0 +1,15 @@
+<h1><%= @animal.species %></h1>
+
+<p>Location: <%= @animal.place %></p>
+<p>Date: <%= @animal.date %></p>
+<p><a href="/animals">Return to animal listing</a></p>
+
+<p><a href="/animals/<%= @animal.id %>/sightings/new">Add sightings</a></p>
+
+<p><a href="/animals/<%= @animal.id %>/edit">Edit</a></p>
+
+<p><a href="/animals/<%= @animal.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+

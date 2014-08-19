@@ -1,0 +1,11 @@
+<h1>Sightings</h1>
+
+<ul>
+  <% @sightings.each do |sighting| %>
+    <li><a href="/sightings/<%= sighting.id %>"><%= sighting.species %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/sightings/new">Would you like to add a new sighting?</a></p>
+
+<p><a href="/animals">Return to animal listing</a></p>

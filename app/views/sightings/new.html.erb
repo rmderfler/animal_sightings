@@ -1,0 +1,20 @@
+<h1>New sighting for <%= @sighting.animal.species %></h1>
+
+<% if @sighting.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @sighting.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/animals/<%= @sighting.animal_id %>/sightings" method="post">
+  <label for="species">species</label>
+  <input id="species" name="sighting[species]" type="text" value="<%= @sighting.species %>">
+  <label for="sighting_place">Place</label>
+  <input id="sighting_place" name="sighting[place]" type="text" value="<%= @sighting.place %>">
+  <label for="sighting_date">Date</label>
+  <input id="sighting_date" name="sighting[date]" type="text" value="<%= @sighting.date %>">
+  <button>Create sighting</button>
+</form>
